@@ -1,7 +1,12 @@
 import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Caution } from 'src/app/models/caution.model';
+import { Ordonnateur } from 'src/app/models/ordonnateur.model';
+import { Fournisseur } from 'src/app/models/fournisseur.model';
+import { Banque } from 'src/app/models/banque.model';
 import { CautionService } from 'src/app/services/caution.service';
+import { BanqueService } from 'src/app/services/banque.service';
+
 
 @Component({
   selector: 'app-addcaution',
@@ -9,42 +14,54 @@ import { CautionService } from 'src/app/services/caution.service';
   styleUrls: ['./addcaution.component.css']
 })
 export class AddcautionComponent implements OnInit{
+  ToShow:Banque[]=[];
+  cautions?:Banque[];
   ngOnInit(): void {
-    
+    this.banqueService.getAll().subscribe(
+      data=>{
+        this.ToShow=data;
+      }
+    )
   }
-  constructor(private cautionService:CautionService,private router:Router){}
+  constructor(private cautionService:CautionService,private router:Router,private banqueService:BanqueService){}
   caution: Caution ={
-    id:'',
+    
      code:0,
      datecaut:new Date(),
+     datesaisie:new Date(),
+     dateleve:new Date(),
+     daterest:new Date(),
      reference:'',
-     montant:'',
+     montant:0,
      remarque:'',
      etat:'',
-     ordonnateurs:'',
-     banques:'',
-     fournisseurs:''
+     ordonnateurs:null,
+     banques:null,
+     fournisseurs:null
   };
+  
   submitted = false;
   saveCaution():void{
     const caution ={
-      id:this.caution.id,
+      
       code:this.caution.code,
       datecaut:this.caution.datecaut,
+      datesaisie:this.caution.datesaisie,
+      dateleve:this.caution.dateleve,
+      daterest:this.caution.daterest,
       reference:this.caution.reference,
       montant:this.caution.montant,
       remarque:this.caution.remarque,
       etat:this.caution.etat,
       ordonnateurs:this.caution.ordonnateurs,
       banques:this.caution.banques,
-      fournisseurs:this.caution.fournisseurs
+      fournisseurs:this.caution.fournisseurs,
     };
     console.log(this.caution);
     this.cautionService.addCaut(this.caution).subscribe(
       caution =>{
-        this.submitted=true;
         console.log(caution);
-  
+        this.submitted=true;
       }
     )
   }

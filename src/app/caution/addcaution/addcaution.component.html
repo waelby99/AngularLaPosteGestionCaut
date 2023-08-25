@@ -23,7 +23,7 @@
           <div class="form-group">
             <label>Etat</label>
             <select class="form-control" id="etat" [(ngModel)]="caution.etat">
-                <option value="option1">En cours</option>
+                <option value="encours">En cours</option>
               </select> 
           </div>
           <div class="form-group">
@@ -36,9 +36,10 @@
             </select>  
           </div>
           <div class="form-group">
-            <label>Banque</label>
-            <select type="text" class="form-control" id="banques" [(ngModel)]="caution.banques">
-            </select> 
+            <label>Banque</label><select type="text" class="form-control" id="banques" [(ngModel)]="caution.banques">
+              <option *ngFor="let i of ToShow">{{i.nom}}</option>
+            </select>
+             
           </div>
           <div class="form-group">
             <label>Fournisseur</label>
