@@ -1,18 +1,23 @@
-<div class="container-scroller" style="margin-bottom: 100px;">
-    <div class="row p-0 m-0 proBanner" id="proBanner">
+<div class="container-scroller">
+    <div class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row" id="proBanner">
       <div class="col-md-12 p-0 m-0">
         <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
           <div class="custom-nav-links d-flex align-items-center justify-content-between">
             <a href="#" class="nav-link"><i class="mdi mdi-home"></i> Home</a>
-            <a href="#" class="nav-link"><i class="mdi mdi-account-key"></i> Cautions</a>
+            <a routerLink="cautions" class="nav-link"><i class="mdi mdi-cash-multiple"></i> Cautions</a>
             <a href="#" class="nav-link"><i class="mdi mdi-bank"></i> Banques</a>
             <a href="#" class="nav-link"><i class="mdi mdi-account-group"></i> Ordonateurs</a>
             <a href="#" class="nav-link"><i class="mdi mdi-truck-delivery"></i> Fournisseurs</a>
+            <a href="#" class="nav-link"><i class="mdi mdi-account-multiple"></i> Utilisateurs</a>
             <a (click)="logout()" class="nav-link ms-auto"><i class="mdi mdi-logout"></i> Déconnexion</a> 
           </div>
         </div>
       </div>
     </div>
+
+    <router-outlet>
+        
+    </router-outlet>
   </div>
 
   

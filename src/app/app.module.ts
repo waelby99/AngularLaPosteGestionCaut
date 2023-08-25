@@ -11,6 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { httpInterceptorProviders } from './_helpers/http.interceptor';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CautionComponent } from './caution/caution.component';
+import { DetailcautionComponent } from './caution/detailcaution/detailcaution.component';
+import { AddcautionComponent } from './caution/addcaution/addcaution.component';
+import { ModifcautionComponent } from './caution/modifcaution/modifcaution.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { CautionComponent } from './caution/caution.component';
     HomeComponent,
     NavbarComponent,
     CautionComponent,
+    DetailcautionComponent,
+    AddcautionComponent,
+    ModifcautionComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,60 @@
+@import '~@mdi/font/css/materialdesignicons.css';
+
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .add-button {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+  .cheque {
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px auto; /* Utilisation de 'auto' pour centrer horizontalement */
+    position: relative;
+    
+  }
+
+  .cheque-header {
+    background-color: #585b5e;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .cheque-content {
+    padding: 20px;
+  }
+
+  .section {
+    margin-bottom: 10px;
+  }
+
+  .section-label {
+    font-weight: bold;
+  }
+
+  .section-value {
+    display: block;
+    margin-left: 20px;
+  }
+
+  .cheque-footer {
+    font-size: 12px;
+    color: #777;
+    padding: 10px 20px;
+    border-top: 1px solid #ccc;
+  }

@@ -1,0 +1,57 @@
+<div class="container-fluid page-body-wrapper">
+
+    <div style="text-align: right;margin-left: 1200px;">
+        <button class="btn btn-outline-dark btn-fw"><i class="mdi mdi-file-pdf-box"></i>Exporter en pdf</button>
+  </div>
+<div class="cheque" *ngIf="mat">
+    <div class="cheque-header">
+      <h3>Chèque</h3>
+    </div>
+    <div class="cheque-content">
+      
+      <div class="section">
+        <span class="section-label">Code:</span>
+        <span class="section-value">{{mat.code}}</span>
+      </div>
+      <div class="section">
+        <span class="section-label">Date de caution:</span>
+        <span class="section-value">{{mat.datecaut | date:'yyyy-MM-dd'}}</span>
+      </div>
+      <div class="section">
+        <span class="section-label">Date de levé:</span>
+        <span class="section-value">{{mat.dateleve | date:'yyyy-MM-dd'}}</span>
+      </div>
+      <div class="section">
+        <span class="section-label">Date restitution:</span>
+        <span class="section-value">{{mat.daterest | date:'yyyy-MM-dd'}}</span>
+      </div>
+      <div class="section">
+        <span class="section-label">Date de saisie:</span>
+        <span class="section-value">{{mat.datesaisie | date:'yyyy-MM-dd'}}</span>
+      </div>
+      <div class="section">
+        <span class="section-label">Banque:</span>
+        <span class="section-value">{{mat.banques[0].nom}}</span>
+      </div>
+      <div class="section">
+        <span class="section-label">Fournisseur:</span>
+        <span class="section-value">{{mat.fournisseurs[0].nom}}</span>
+      </div>
+      <div class="section">
+        <span class="section-label">Ordonnateur:</span>
+        <span class="section-value">{{mat.ordonnateurs[0].nom}}</span>
+      </div>
+      <div class="section">
+        <span class="section-label">Référence:</span>
+        <span class="section-value">{{mat.reference}}</span>
+      </div>
+      <div class="section">
+        <span class="section-label">Montant:</span>
+        <span class="section-value">{{mat.montant}} DT</span>
+      </div>
+    </div>
+    <div class="cheque-footer">
+      <p>État: {{mat.etat}}</p>
+    </div>
+  </div>
+</div>
