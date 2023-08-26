@@ -14,6 +14,11 @@ import { CautionComponent } from './caution/caution.component';
 import { DetailcautionComponent } from './caution/detailcaution/detailcaution.component';
 import { AddcautionComponent } from './caution/addcaution/addcaution.component';
 import { ModifcautionComponent } from './caution/modifcaution/modifcaution.component';
+import { BanqueComponent } from './banque/banque.component';
+import { OrdonnateurComponent } from './ordonnateur/ordonnateur.component';
+import { FournisseurComponent } from './fournisseur/fournisseur.component';
+import { UtilisateurComponent } from './utilisateur/utilisateur.component';
+import { AddComponent } from './banque/add/add.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,12 @@ import { ModifcautionComponent } from './caution/modifcaution/modifcaution.compo
     CautionComponent,
     DetailcautionComponent,
     AddcautionComponent,
-    ModifcautionComponent
+    ModifcautionComponent,
+    BanqueComponent,
+    OrdonnateurComponent,
+    FournisseurComponent,
+    UtilisateurComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,

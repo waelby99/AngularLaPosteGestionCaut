@@ -1,0 +1,48 @@
+<div class="container-fluid page-body-wrapper">
+    <div class="content-wrapper">
+      <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title" style="text-align: center;">Listes des ordonnateurs</h4>
+                   <!-- <a (click)="addcaut()" class="btn btn-inverse-primary btn-fw">Ajouter Banque </a>-->
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+
+                                <tr>
+                                    <th>Nom du ordonnateur </th>
+                                    <th>Email</th>
+                                    <th>Adresse</th>
+                                    <th>Téléphone</th>
+                                
+                                    <th style="text-align: center;">Actions</th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let i of ToShow">
+                                    <td>{{i.nom}}</td>
+                                    <td>{{i.mail}}</td>
+                                    <td>{{i.adresse}}</td>
+                                    <td>{{i.tel}}</td>
+                                    
+                                    <td style="text-align: center;">
+                                        <!--<a (click)="detailCaut(i.id)" target="blank" style="font-size: 20px;margin-right: 10px;">
+                                        <i class="mdi mdi-dots-horizontal-circle"></i>
+                                    </a>
+                                    <a (click)="edit(i.id)" target="blank" style="font-size: 20px;">
+                                        <i class="mdi mdi-pencil"></i>
+                                    </a>-->
+                                </td>
+                                </tr>
+                    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+              </div>
+        </div>
+      </div>
+   </div>
+</div>

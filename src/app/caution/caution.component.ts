@@ -10,7 +10,6 @@ import { CautionService } from '../services/caution.service';
 })
 export class CautionComponent implements OnInit{
   ToShow:Caution[]=[];
-  cautions?:Caution[];
   constructor(private cautionService:CautionService,private router:Router){}
 
   ngOnInit(): void {

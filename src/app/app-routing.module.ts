@@ -7,15 +7,25 @@ import { CautionComponent } from './caution/caution.component';
 import { DetailcautionComponent } from './caution/detailcaution/detailcaution.component';
 import { AddcautionComponent } from './caution/addcaution/addcaution.component';
 import { ModifcautionComponent } from './caution/modifcaution/modifcaution.component';
+import { BanqueComponent } from './banque/banque.component';
+import { OrdonnateurComponent } from './ordonnateur/ordonnateur.component';
+import { FournisseurComponent } from './fournisseur/fournisseur.component';
+import { UtilisateurComponent } from './utilisateur/utilisateur.component';
+import { AddComponent } from './banque/add/add.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent },  
-  { path: 'profile', component: ProfileComponent },
+  { path:'', component: HomeComponent },
+  { path:'login', component: LoginComponent },  
+  { path:'profile', component: ProfileComponent },
   { path:'cautions',component:CautionComponent },
   { path:'cautions/modif/:idCaution',component:ModifcautionComponent },
   { path:'addcaution',component:AddcautionComponent },
-  { path:'cautions/details/:idCaution',component:DetailcautionComponent }
+  { path:'cautions/details/:idCaution',component:DetailcautionComponent },
+  { path:'banques',component:BanqueComponent },
+  { path:'addbanque',component:AddComponent },
+  { path:'ordonnateurs',component:OrdonnateurComponent },
+  { path:'fournisseurs',component:FournisseurComponent },
+  { path:'users',component:UtilisateurComponent }
   /*,
   { path: '', redirectTo: 'login', pathMatch: 'full' }*/
 ];

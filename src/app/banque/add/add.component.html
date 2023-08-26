@@ -1,0 +1,33 @@
+<div class="container-fluid page-body-wrapper">
+    <div class="col-md grid-margin stretch-card" style="margin-left: 250px;margin-right: 250px">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title" style="text-align: center;">Ajouter Banque</h4>
+            <div class="forms-sample">
+              <div class="form-group" *ngIf="!submitted">
+                <label>Nom de la Banque</label>
+                <input type="text" class="form-control"  placeholder="Nom de la Banque" id="nom" [(ngModel)]="banque.nom">
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="Email" id="email" [(ngModel)]="banque.mail">
+              </div>
+              <div class="form-group">
+                <label>Adresse</label>
+                <input type="text" class="form-control" placeholder="Adresse" id="adresse" [(ngModel)]="banque.adresse">
+              </div>
+              <div class="form-group">
+                <label>Téléphone</label>
+                <input type="number" class="form-control" placeholder="Téléphone" id="tel" [(ngModel)]="banque.tel">
+              </div>
+             
+             
+              
+              
+              <a type="submit" (click)="saveBanque();newBank()" class="btn btn-primary me-2">Ajouter Banque</a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

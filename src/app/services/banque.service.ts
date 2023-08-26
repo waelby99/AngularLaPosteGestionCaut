@@ -12,4 +12,8 @@ export class BanqueService {
   getAll(): Observable<Banque[]> {
     return this.http.get<Banque[]>(baseUrl);
   }
+  addBank(data:any):Observable<any>{
+    return this.http.post(baseUrl,data);
+  }
+
 }
