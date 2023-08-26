@@ -33,21 +33,24 @@
           <div class="form-group">
             <label>Ordonnateur</label>
             <select type="text" class="form-control" id="ordonnateurs" [(ngModel)]="caution.ordonnateurs">
+              <option *ngFor="let i of ToShow1" [ngValue]="i">{{i.nom}}</option>
             </select>  
           </div>
           <div class="form-group">
             <label>Banque</label><select type="text" class="form-control" id="banques" [(ngModel)]="caution.banques">
-              <option *ngFor="let i of ToShow">{{i.nom}}</option>
+              <option *ngFor="let i of ToShow" [ngValue]="i">{{i.nom}}</option>
             </select>
+
              
           </div>
           <div class="form-group">
             <label>Fournisseur</label>
             <select type="text" class="form-control" id="fournisseurs" [(ngModel)]="caution.fournisseurs">
+              <option *ngFor="let i of ToShow2" [ngValue]="i">{{i.nom}}</option>
             </select>
           </div>
           
-          <a type="submit" (click)="saveCaution()" class="btn btn-primary me-2">Ajouter Caution</a>
+          <a type="submit" (click)="saveCaution();newCaut()" class="btn btn-primary me-2">Ajouter Caution</a>
           
         </div>
       </div>

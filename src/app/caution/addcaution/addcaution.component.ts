@@ -6,6 +6,8 @@ import { Fournisseur } from 'src/app/models/fournisseur.model';
 import { Banque } from 'src/app/models/banque.model';
 import { CautionService } from 'src/app/services/caution.service';
 import { BanqueService } from 'src/app/services/banque.service';
+import { FournisseurService } from 'src/app/services/fournisseur.service';
+import { OrdonnateurService } from 'src/app/services/ordonnateur.service';
 
 
 @Component({
@@ -15,22 +17,33 @@ import { BanqueService } from 'src/app/services/banque.service';
 })
 export class AddcautionComponent implements OnInit{
   ToShow:Banque[]=[];
-  cautions?:Banque[];
+  ToShow1:Ordonnateur[]=[];
+  ToShow2:Fournisseur[]=[];
   ngOnInit(): void {
     this.banqueService.getAll().subscribe(
       data=>{
         this.ToShow=data;
       }
     )
+    this.ordonnaterService.getAll().subscribe(
+      data => {
+        this.ToShow1 =data;
+      }
+    )
+    this.fournisseurService.getAll().subscribe(
+      data =>{
+        this.ToShow2 =data;
+      }
+    )
   }
-  constructor(private cautionService:CautionService,private router:Router,private banqueService:BanqueService){}
+  constructor(private cautionService:CautionService,private router:Router,private banqueService:BanqueService,private ordonnaterService:OrdonnateurService,private fournisseurService:FournisseurService){}
   caution: Caution ={
     
      code:0,
      datecaut:new Date(),
-     datesaisie:new Date(),
-     dateleve:new Date(),
-     daterest:new Date(),
+     datesaisie:undefined,
+     dateleve:undefined,
+     daterest:undefined,
      reference:'',
      montant:0,
      remarque:'',

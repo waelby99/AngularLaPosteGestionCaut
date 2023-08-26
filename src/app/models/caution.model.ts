@@ -1,3 +1,5 @@
+import { Banque } from "./banque.model";
+
 export class Caution {
 id?:any;
 code?:number;
