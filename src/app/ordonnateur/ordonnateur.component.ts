@@ -20,5 +20,8 @@ export class OrdonnateurComponent implements OnInit{
       }
     )
   }
+  addord(){
+    this.router.navigate(['addord']);
+  }
 
 }

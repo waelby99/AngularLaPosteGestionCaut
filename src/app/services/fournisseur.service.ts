@@ -13,4 +13,7 @@ export class FournisseurService {
   getAll(): Observable<Fournisseur[]> {
     return this.http.get<Fournisseur[]>(baseUrl);
   }
+  addFour(data:any):Observable<any>{
+    return this.http.post(baseUrl,data);
+  }
 }

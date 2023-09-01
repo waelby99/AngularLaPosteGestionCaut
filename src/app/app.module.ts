@@ -19,6 +19,8 @@ import { OrdonnateurComponent } from './ordonnateur/ordonnateur.component';
 import { FournisseurComponent } from './fournisseur/fournisseur.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { AddComponent } from './banque/add/add.component';
+import { AddfournisseurComponent } from './fournisseur/addfournisseur/addfournisseur.component';
+import { AddordComponent } from './ordonnateur/addord/addord.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { AddComponent } from './banque/add/add.component';
     OrdonnateurComponent,
     FournisseurComponent,
     UtilisateurComponent,
-    AddComponent
+    AddComponent,
+    AddfournisseurComponent,
+    AddordComponent
   ],
   imports: [
     BrowserModule,

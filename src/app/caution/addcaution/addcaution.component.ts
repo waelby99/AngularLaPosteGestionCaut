@@ -39,13 +39,13 @@ export class AddcautionComponent implements OnInit{
   constructor(private cautionService:CautionService,private router:Router,private banqueService:BanqueService,private ordonnaterService:OrdonnateurService,private fournisseurService:FournisseurService){}
   caution: Caution ={
     
-     code:0,
+     code:undefined,
      datecaut:new Date(),
-     datesaisie:undefined,
+    // datesaisie:undefined,
      dateleve:undefined,
      daterest:undefined,
      reference:'',
-     montant:0,
+     montant:undefined,
      remarque:'',
      etat:'',
      ordonnateurs:null,
@@ -59,7 +59,7 @@ export class AddcautionComponent implements OnInit{
       
       code:this.caution.code,
       datecaut:this.caution.datecaut,
-      datesaisie:this.caution.datesaisie,
+     // datesaisie:this.caution.datesaisie,
       dateleve:this.caution.dateleve,
       daterest:this.caution.daterest,
       reference:this.caution.reference,

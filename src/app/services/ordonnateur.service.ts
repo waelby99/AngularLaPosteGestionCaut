@@ -13,4 +13,7 @@ export class OrdonnateurService {
   getAll(): Observable<Ordonnateur[]> {
     return this.http.get<Ordonnateur[]>(baseUrl);
   }
+  addOrd(data:any):Observable<any>{
+    return this.http.post(baseUrl,data);
+  }
 }

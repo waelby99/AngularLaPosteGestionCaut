@@ -9,7 +9,7 @@ montant?:any;
 dateleve?:Date;
 daterest?:Date;
 remarque?:string;
-datesaisie?:Date;
+//datesaisie?:Date;
 etat?:string;
 ordonnateurs?:any;
 banques?:any;

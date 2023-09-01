@@ -12,6 +12,8 @@ import { OrdonnateurComponent } from './ordonnateur/ordonnateur.component';
 import { FournisseurComponent } from './fournisseur/fournisseur.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { AddComponent } from './banque/add/add.component';
+import { AddfournisseurComponent } from './fournisseur/addfournisseur/addfournisseur.component';
+import { AddordComponent } from './ordonnateur/addord/addord.component';
 
 const routes: Routes = [
   { path:'', component: HomeComponent },
@@ -24,7 +26,9 @@ const routes: Routes = [
   { path:'banques',component:BanqueComponent },
   { path:'addbanque',component:AddComponent },
   { path:'ordonnateurs',component:OrdonnateurComponent },
+  { path:'addord',component:AddordComponent },
   { path:'fournisseurs',component:FournisseurComponent },
+  { path:'addfournisseurs',component:AddfournisseurComponent },
   { path:'users',component:UtilisateurComponent }
   /*,
   { path: '', redirectTo: 'login', pathMatch: 'full' }*/

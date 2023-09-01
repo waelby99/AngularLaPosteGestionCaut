@@ -19,5 +19,8 @@ export class FournisseurComponent implements OnInit{
       }
     )
   }
+  addfour(){
+    this.router.navigate(['addfournisseurs']);
+  }
 
 }
