@@ -14,11 +14,15 @@ import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { AddComponent } from './banque/add/add.component';
 import { AddfournisseurComponent } from './fournisseur/addfournisseur/addfournisseur.component';
 import { AddordComponent } from './ordonnateur/addord/addord.component';
+import { DemandeComponent } from './demande/demande.component';
+import { AdddemComponent } from './demande/adddem/adddem.component';
 
 const routes: Routes = [
   { path:'', component: HomeComponent },
   { path:'login', component: LoginComponent },  
   { path:'profile', component: ProfileComponent },
+  { path:'demandes', component: DemandeComponent },
+  { path:'adddem', component: AdddemComponent },
   { path:'cautions',component:CautionComponent },
   { path:'cautions/modif/:idCaution',component:ModifcautionComponent },
   { path:'addcaution',component:AddcautionComponent },
