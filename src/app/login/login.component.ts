@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { StorageService } from '../services/storage.service';
 import { Router } from '@angular/router';
+import { Demande } from '../models/demande.model';
+import { DemandeService } from '../services/demande.service';
 
 @Component({
   selector: 'app-login',
@@ -17,8 +19,44 @@ export class LoginComponent implements OnInit {
   isLoginFailed = false;
   errorMessage = '';
   roles: string[] = [];
+  test=true;
 
-  constructor(private authService: AuthService, private storageService: StorageService,private router:Router) { }
+  demande: Demande ={
+    username:'',
+    nom:'',
+    position:'',
+    prenom:'',
+    email:'',
+    password:'', 
+    demandecreatedat:new  Date(),
+    etat:false
+     
+  };
+  
+  submitted1 = false;
+  save():void{
+    const demande ={
+      
+      username:this.demande.username,
+      nom:this.demande.nom,
+      position:this.demande.position,
+      prenom:this.demande.prenom,
+      email:this.demande.email,
+      password:this.demande.password,
+      demandecreatedat:this.demande.demandecreatedat,
+      etat:this.demande.etat,
+      
+    };
+    console.log(demande);
+    this.demandeService.addDemande(this.demande).subscribe(
+      demande =>{
+        console.log(demande);
+        this.submitted1=true;
+      }
+    )
+  }
+
+  constructor(private authService: AuthService, private storageService: StorageService,private router:Router,private demandeService:DemandeService) { }
 
   ngOnInit(): void {
     if (this.storageService.isLoggedIn()) {
@@ -46,10 +84,13 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  onClick():void{
+    this.test=!this.test;
+    console.log(this.test);
+  }
+
   reloadPage(): void {
     window.location.reload();
   }
-  addcaut(){
-    this.router.navigate(['adddem']);
-  }
+  
 }

@@ -22,8 +22,6 @@ import { AddComponent } from './banque/add/add.component';
 import { AddfournisseurComponent } from './fournisseur/addfournisseur/addfournisseur.component';
 import { AddordComponent } from './ordonnateur/addord/addord.component';
 import { DemandeComponent } from './demande/demande.component';
-import { AdddemComponent } from './demande/adddem/adddem.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +41,6 @@ import { AdddemComponent } from './demande/adddem/adddem.component';
     AddfournisseurComponent,
     AddordComponent,
     DemandeComponent,
-    AdddemComponent
   ],
   imports: [
     BrowserModule,
