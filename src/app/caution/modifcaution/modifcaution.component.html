@@ -1,1 +1,54 @@
-<p>modifcaution works!</p>
+<div class="container-fluid page-body-wrapper">
+    <div class="col-md grid-margin stretch-card" style="margin-left: 250px;margin-right: 250px">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title" style="text-align: center;">Modifier Caution</h4>
+            <div class="forms-sample">
+              <div class="form-group">
+                <label>Code</label>
+                <input type="number" class="form-control"  placeholder="Code" id="code" [(ngModel)]="caut.code">
+              </div>
+              <div class="form-group">
+                <label>Reference</label>
+                <input type="text" class="form-control" placeholder="Reference" id="reference" [(ngModel)]="caut.reference">
+              </div>
+              <div class="form-group">
+                <label>Montant</label>
+                <input type="number" class="form-control" placeholder="Montant" id="montant" [(ngModel)]="caut.montant">
+              </div>
+              <div class="form-group">
+                <label>Remarque</label>
+                <input type="textfield" class="form-control" placeholder="Remarque" id="remarque" [(ngModel)]="caut.remarque">
+              </div>
+              <div class="form-group">
+                <label>Etat</label>
+                <select class="form-control" id="etat" [(ngModel)]="caut.etat">       
+                    <option value="leve">Main levé</option>
+                    <option value="restitution">Restitué</option>
+                    <option value="saisie">Saisie</option>
+                  </select> 
+              </div>
+            
+              <div class="form-group">
+                <label>Ordonnateur</label>
+                <select type="text" class="form-control" id="ordonnateurs" [(ngModel)]="caut.ordonnateurs">
+                  <option *ngFor="let i of ToShow1" [ngValue]="i">{{i.ref}} | {{i.nom}}</option>
+                </select>  
+              </div>
+              <div class="form-group">
+                <label>Banque</label><select type="text" class="form-control" id="banques" [(ngModel)]="caut.banques">
+                  <option *ngFor="let i of ToShow" [ngValue]="i">{{i.nom}}</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Fournisseur</label>
+                <select type="text" class="form-control" id="fournisseurs" [(ngModel)]="caut.fournisseurs">
+                  <option *ngFor="let i of ToShow2" [ngValue]="i">{{i.nom}}</option>
+                </select>
+              </div>
+              <a type="submit" (click)="update()" class="btn btn-primary me-2">Modifier Caution</a>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

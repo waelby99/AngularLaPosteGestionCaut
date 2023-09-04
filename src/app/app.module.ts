@@ -22,6 +22,11 @@ import { AddComponent } from './banque/add/add.component';
 import { AddfournisseurComponent } from './fournisseur/addfournisseur/addfournisseur.component';
 import { AddordComponent } from './ordonnateur/addord/addord.component';
 import { DemandeComponent } from './demande/demande.component';
+import { EditbanComponent } from './banque/editban/editban.component';
+import { EditordComponent } from './ordonnateur/editord/editord.component';
+import { EditfordComponent } from './fournisseur/editford/editford.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +46,10 @@ import { DemandeComponent } from './demande/demande.component';
     AddfournisseurComponent,
     AddordComponent,
     DemandeComponent,
+    EditbanComponent,
+    EditordComponent,
+    EditfordComponent,
+    
   ],
   imports: [
     BrowserModule,

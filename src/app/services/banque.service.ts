@@ -15,5 +15,11 @@ export class BanqueService {
   addBank(data:any):Observable<any>{
     return this.http.post(baseUrl,data);
   }
+  getBanqueById(idBanque:any):Observable<any> {
+    return this.http.get(baseUrl+'/'+idBanque);
+  }
+  editBank(idBanque: any, data: any):Observable<any>{
+    return this.http.put(baseUrl+'/'+idBanque,data);
+  }
 
 }

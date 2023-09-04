@@ -15,6 +15,9 @@ import { AddComponent } from './banque/add/add.component';
 import { AddfournisseurComponent } from './fournisseur/addfournisseur/addfournisseur.component';
 import { AddordComponent } from './ordonnateur/addord/addord.component';
 import { DemandeComponent } from './demande/demande.component';
+import { EditfordComponent } from './fournisseur/editford/editford.component';
+import { EditbanComponent } from './banque/editban/editban.component';
+import { EditordComponent } from './ordonnateur/editord/editord.component';
 
 const routes: Routes = [
   { path:'', component: HomeComponent },
@@ -26,10 +29,13 @@ const routes: Routes = [
   { path:'addcaution',component:AddcautionComponent },
   { path:'cautions/details/:idCaution',component:DetailcautionComponent },
   { path:'banques',component:BanqueComponent },
+  { path:'banques/modif/:idBanque',component:EditbanComponent },
   { path:'addbanque',component:AddComponent },
   { path:'ordonnateurs',component:OrdonnateurComponent },
+  { path:'ordonnateurs/modif/:idOrdonnateur',component:EditordComponent },
   { path:'addord',component:AddordComponent },
   { path:'fournisseurs',component:FournisseurComponent },
+  { path:'fournisseurs/modif/:idFournisseur',component:EditfordComponent },
   { path:'addfournisseurs',component:AddfournisseurComponent },
   { path:'users',component:UtilisateurComponent }
   /*,

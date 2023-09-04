@@ -16,4 +16,10 @@ export class FournisseurService {
   addFour(data:any):Observable<any>{
     return this.http.post(baseUrl,data);
   }
+  getFournisseurById(idFour:any):Observable<any> {
+    return this.http.get(baseUrl+'/'+idFour);
+  }
+  editFournisseur(idFour: any, data: any):Observable<any>{
+    return this.http.put(baseUrl+'/'+idFour,data);
+  }
 }

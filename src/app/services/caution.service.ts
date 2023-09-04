@@ -21,4 +21,7 @@ export class CautionService {
   addCaut(data:any):Observable<any>{
     return this.http.post(baseUrl,data);
   }
+  editCaut(idCaution: any, data: any):Observable<any>{
+    return this.http.put(baseUrl+'/'+idCaution,data);
+  }
 }

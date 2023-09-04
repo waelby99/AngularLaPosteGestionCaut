@@ -16,4 +16,10 @@ export class OrdonnateurService {
   addOrd(data:any):Observable<any>{
     return this.http.post(baseUrl,data);
   }
+  getOrdonnateurById(idOrd:any):Observable<any> {
+    return this.http.get(baseUrl+'/'+idOrd);
+  }
+  editOrdonnateur(idOrd: any, data: any):Observable<any>{
+    return this.http.put(baseUrl+'/'+idOrd,data);
+  }
 }
