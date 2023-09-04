@@ -33,7 +33,7 @@
           <div class="form-group">
             <label>Ordonnateur</label>
             <select type="text" class="form-control" id="ordonnateurs" [(ngModel)]="caution.ordonnateurs">
-              <option *ngFor="let i of ToShow1" [ngValue]="i">{{i.nom}}</option>
+              <option *ngFor="let i of ToShow1" [ngValue]="i">{{i.ref}} | {{i.nom}}</option>
             </select>  
           </div>
           <div class="form-group">

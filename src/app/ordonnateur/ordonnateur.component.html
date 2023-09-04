@@ -11,10 +11,11 @@
                             <thead>
 
                                 <tr>
+                                    <th>Reference</th>
                                     <th>Nom du ordonnateur </th>
-                                    <th>Email</th>
-                                    <th>Adresse</th>
-                                    <th>Téléphone</th>
+                                    
+                                    
+                                    
                                 
                                     <th style="text-align: center;">Actions</th>
                                 </tr>
@@ -22,10 +23,9 @@
                             </thead>
                             <tbody>
                                 <tr *ngFor="let i of ToShow">
+                                    <td>{{i.ref}}</td>
                                     <td>{{i.nom}}</td>
-                                    <td>{{i.mail}}</td>
-                                    <td>{{i.adresse}}</td>
-                                    <td>{{i.tel}}</td>
+                                    
                                     
                                     <td style="text-align: center;">
                                         <!--<a (click)="detailCaut(i.id)" target="blank" style="font-size: 20px;margin-right: 10px;">

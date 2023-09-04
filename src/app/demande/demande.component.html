@@ -31,7 +31,8 @@
                                     <td>{{i.position}}</td>
                                     <td>{{i.email}}</td>
                                     <td>{{i.demandecreatedat | date:'yyyy-MM-dd HH:mm'}}</td>
-                                    <td>{{i.etat}}</td>
+                                    <td>{{ i.etat ? 'Traité' : 'Non Traité' }}</td>
+                                      
                                     <td style="text-align: center;">         
                                     </td>
                                 </tr>

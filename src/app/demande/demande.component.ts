@@ -12,6 +12,7 @@ export class DemandeComponent implements OnInit{
  
   ngOnInit(): void {
     this.demandeService.getAll().subscribe(
+      
       data=>{
         this.ToShow=data;
       }

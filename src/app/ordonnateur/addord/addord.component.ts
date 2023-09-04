@@ -13,20 +13,15 @@ export class AddordComponent {
   constructor(private  router:Router,private ordonnateurService:OrdonnateurService){}
   ordonnateur: Ordonnateur ={
     nom:'',
-    mail:'',
-    adresse:'', 
-    tel:undefined
-     
+    ref:'',
   };
   
   submitted = false;
   saveordonnateur():void{
-    const banque ={
+    const ord ={
       
       nom:this.ordonnateur.nom,
-      mail:this.ordonnateur.mail,
-      adresse:this.ordonnateur.adresse,
-      tel:this.ordonnateur.tel
+      ref:this.ordonnateur.ref
     };
     console.log(this.ordonnateur);
     this.ordonnateurService.addOrd(this.ordonnateur).subscribe(
