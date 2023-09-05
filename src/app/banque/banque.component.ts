@@ -27,7 +27,7 @@ export class BanqueComponent implements OnInit{
   addbank(){
     this.router.navigate(['addbanque']);
   }
-  /*edit(idCaution:any){
-    this.router.navigate(['cautions/modif/'+idCaution]);
-  }*/
+  edit(idBanque:any){
+    this.router.navigate(['banques/modif/'+idBanque]);
+  }
 }

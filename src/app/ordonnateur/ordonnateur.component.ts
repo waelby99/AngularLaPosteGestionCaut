@@ -23,5 +23,7 @@ export class OrdonnateurComponent implements OnInit{
   addord(){
     this.router.navigate(['addord']);
   }
-
+  edit(idOrdonnateur:any){
+    this.router.navigate(['ordonnateurs/modif/'+idOrdonnateur]);
+  }
 }

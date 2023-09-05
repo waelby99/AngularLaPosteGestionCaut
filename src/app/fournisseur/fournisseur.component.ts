@@ -22,5 +22,8 @@ export class FournisseurComponent implements OnInit{
   addfour(){
     this.router.navigate(['addfournisseurs']);
   }
+  edit(idFournisseur:any){
+    this.router.navigate(['fournisseurs/modif/'+idFournisseur]);
+  }
 
 }
