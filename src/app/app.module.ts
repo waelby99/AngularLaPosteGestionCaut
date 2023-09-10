@@ -26,6 +26,8 @@ import { EditbanComponent } from './banque/editban/editban.component';
 import { EditordComponent } from './ordonnateur/editord/editord.component';
 import { EditfordComponent } from './fournisseur/editford/editford.component';
 
+import { SigupComponent } from './demande/sigup/sigup.component';
+
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { EditfordComponent } from './fournisseur/editford/editford.component';
     EditbanComponent,
     EditordComponent,
     EditfordComponent,
+    SigupComponent,
     
   ],
   imports: [

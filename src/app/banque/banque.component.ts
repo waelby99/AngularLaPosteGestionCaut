@@ -15,6 +15,7 @@ export class BanqueComponent implements OnInit{
   constructor(private banqueService:BanqueService,private router:Router){}
 
   ngOnInit(): void {
+    
       this.banqueService.getAll().subscribe(
         data=>{
           this.ToShow=data;

@@ -22,10 +22,10 @@
               </div>
               <div class="form-group">
                 <label>Etat</label>
-                <select class="form-control" id="etat" [(ngModel)]="caut.etat">       
-                    <option value="leve">Main levé</option>
-                    <option value="restitution">Restitué</option>
-                    <option value="saisie">Saisie</option>
+                <select class="form-control" id="etat" [(ngModel)]="caut.etat" [disabled]="caut.etat === 'Restitué' || caut.etat === 'Non_Restitué'">       
+                  <option value="Main_Leve" [hidden]="caut.etat === 'Non_Restitué' || caut.etat === 'Restitué'">Main levé</option>
+                  <option value="Restitué" [hidden]="caut.etat === 'En_cours'">Restitué</option>
+                  <option value="Non_Restitué" [hidden]="caut.etat === 'Main_Leve'">Non Restitué</option>
                   </select> 
               </div>
             

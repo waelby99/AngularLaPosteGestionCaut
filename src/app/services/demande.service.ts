@@ -16,4 +16,10 @@ export class DemandeService {
   addDemande(data:any):Observable<any>{
     return this.http.post(baseUrl,data);
   }
+  getDemandeById(idD:any):Observable<any> {
+    return this.http.get(baseUrl+'/'+idD);
+  }
+  editCaut(id: any, data: any):Observable<any>{
+    return this.http.put(baseUrl+'/'+id,data);
+  }
 }

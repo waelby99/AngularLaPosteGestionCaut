@@ -18,10 +18,12 @@ import { DemandeComponent } from './demande/demande.component';
 import { EditfordComponent } from './fournisseur/editford/editford.component';
 import { EditbanComponent } from './banque/editban/editban.component';
 import { EditordComponent } from './ordonnateur/editord/editord.component';
+import { SigupComponent } from './demande/sigup/sigup.component';
 
 const routes: Routes = [
   { path:'', component: HomeComponent },
-  { path:'login', component: LoginComponent },  
+  { path:'login', component: LoginComponent },
+  { path:'signup/:idD', component: SigupComponent },  
   { path:'profile', component: ProfileComponent },
   { path:'demandes', component: DemandeComponent },
   { path:'cautions',component:CautionComponent },

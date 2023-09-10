@@ -37,7 +37,7 @@ export class AddComponent {
     )
   }
   newBank(): void {
-    window.location.reload();
-    //this.router.navigate(['banques']);
+    
+    this.router.navigate(['banques']);
     }
 }

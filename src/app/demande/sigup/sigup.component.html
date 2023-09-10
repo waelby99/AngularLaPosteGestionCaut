@@ -1,0 +1,41 @@
+<div class="container-fluid page-body-wrapper">
+    <div class="col-md grid-margin stretch-card" style="margin-left: 250px;margin-right: 250px">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title" style="text-align: center;">Créer un compte pour cette personne</h4>
+            <div class="forms-sample">
+                  
+                    <div class="form-group" *ngIf="!submitted1">
+                      <label>Username</label>
+                      <input type="text" class="form-control"  placeholder="Votre Username" id="username" [(ngModel)]="demande.username">
+                    </div>
+                    <div class="form-group">
+                      <label>Nom</label>
+                      <input type="text" class="form-control"  placeholder="Votre Nom" id="nom" [(ngModel)]="demande.nom">
+                    </div>
+                    <div class="form-group">
+                      <label>Prenom</label>
+                      <input type="text" class="form-control"  placeholder="Votre Prenom" id="prenom" [(ngModel)]="demande.prenom">
+                    </div>
+                    <div class="form-group">
+                      <label>Position</label>
+                      <input type="text" class="form-control"  placeholder="Votre position" id="position" [(ngModel)]="demande.position">
+                    </div>
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input type="email" class="form-control"  placeholder="Votre Email" id="email" [(ngModel)]="demande.email">
+                    </div>
+                    <div class="form-group">
+                      <label>Mot de Passe</label>
+                      <input type="password" class="form-control"  placeholder="Votre Password" id="password" [(ngModel)]="demande.password">
+                    </div>
+                    <div class="mt-3">
+                      <button (click)="submit()"  style="margin-left:400px;" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" >Créer compte</button>
+                    </div> 
+                    
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+          

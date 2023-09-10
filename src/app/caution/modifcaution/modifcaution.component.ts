@@ -48,10 +48,14 @@ export class ModifcautionComponent implements OnInit  {
   }
   update(): void {
    
-    
+    if (this.caut.etat=="Main_Leve"){
+    this.caut.dateleve=new Date();}
+  else if (this.caut.etat=="Restitué")
+{
+  this.caut.daterest=new Date();
+}
    this.cautionService.editCaut(this.id, this.caut).subscribe( 
         response => {
-          console.log(this.caut);
           console.log(response);
         },
         error => {

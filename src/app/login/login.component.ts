@@ -86,7 +86,6 @@ export class LoginComponent implements OnInit {
 
   onClick():void{
     this.test=!this.test;
-    console.log(this.test);
   }
 
   reloadPage(): void {
