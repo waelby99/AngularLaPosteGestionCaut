@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../services/user.service';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +7,11 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  content?: string;
+  
 
-  constructor(private userService: UserService) { }
-
+  constructor(private storageService: StorageService) { }
+  user:any;
   ngOnInit(): void {
-    
+    this.user=this.storageService.getUser();
   }
 }
