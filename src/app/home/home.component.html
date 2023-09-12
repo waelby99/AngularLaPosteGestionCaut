@@ -3,7 +3,10 @@
     <div class="row">
       <h1>Bonjour Mr {{user.nom}} {{user.prenom}}</h1>
       <h2>Vous occupez de la poste :{{user.position}} </h2>
-    
+      <script src="path/to/chartjs/dist/chart.umd.js"></script>
+<div class="chart-container" style="position: relative; height:60vh; width:120vw">
+  <canvas id="MyChart">{{chart}}</canvas>
+</div>
     </div>
   </div>
 </div>

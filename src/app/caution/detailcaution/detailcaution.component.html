@@ -1,9 +1,9 @@
 <div class="container-fluid page-body-wrapper">
 
     <div style="text-align: right;margin-left: 1200px;">
-        <button class="btn btn-outline-dark btn-fw"><i class="mdi mdi-file-pdf-box"></i> Exporter en pdf</button>
+        <button (click)="generatePDF()" class="btn btn-outline-dark btn-fw"><i class="mdi mdi-file-pdf-box"></i> Exporter en pdf</button>
   </div>
-<div class="cheque" *ngIf="mat">
+<div class="cheque" *ngIf="mat" #cheques>
     <div class="cheque-header">
       <h3>Caution</h3>
     </div>

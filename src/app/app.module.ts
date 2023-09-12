@@ -25,7 +25,7 @@ import { DemandeComponent } from './demande/demande.component';
 import { EditbanComponent } from './banque/editban/editban.component';
 import { EditordComponent } from './ordonnateur/editord/editord.component';
 import { EditfordComponent } from './fournisseur/editford/editford.component';
-
+import { NgChartsModule } from 'ng2-charts';
 import { SigupComponent } from './demande/sigup/sigup.component';
 
 
@@ -58,7 +58,8 @@ import { SigupComponent } from './demande/sigup/sigup.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgChartsModule
   ],
   providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]

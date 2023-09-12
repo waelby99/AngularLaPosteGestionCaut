@@ -1,5 +1,6 @@
-import { Component,OnInit } from '@angular/core';
-import { Caution } from 'src/app/models/caution.model';
+import { Component,OnInit, ElementRef, ViewChild } from '@angular/core';
+import { jsPDF } from 'jspdf';
+import html2canvas from 'html2canvas';
 import { CautionService } from 'src/app/services/caution.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -10,7 +11,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class DetailcautionComponent implements OnInit{
 
+  
+  @ViewChild('cheques', { static: false }) content!: ElementRef;
   caution:any;
+  
   idCaution:any;
   mat:any;
   nom:any;
@@ -29,5 +33,12 @@ export class DetailcautionComponent implements OnInit{
       }
     )
   }
+  generatePDF() {
+    const pdf = new jsPDF();
+    html2canvas(this.content.nativeElement).then((canvas) => {
+      pdf.save('mon-fichier.pdf');
+    });
+  }
+
 
 }
