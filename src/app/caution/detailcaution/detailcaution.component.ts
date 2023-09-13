@@ -12,7 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class DetailcautionComponent implements OnInit{
 
   
-  @ViewChild('cheques', { static: false }) content!: ElementRef;
+  
   caution:any;
   
   idCaution:any;
@@ -33,6 +33,7 @@ export class DetailcautionComponent implements OnInit{
       }
     )
   }
+  @ViewChild('cheques', { static: false }) content!: ElementRef;
   generatePDF() {
     const pdf = new jsPDF();
     html2canvas(this.content.nativeElement).then((canvas) => {

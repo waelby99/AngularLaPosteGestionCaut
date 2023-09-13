@@ -19,8 +19,8 @@ export class HomeComponent implements OnInit {
   public chart: any;
   private chartInfo: any;
   private labeldata: any[] = ['En_cours', 'Main_Leve', 'Restitué', 'Non_Restitué'];
-  private realdata: any[] = [0, 0, 0, 0]; // Initialize counts for each state
-  private colordata: any[] = ['red', 'yellow', 'green', 'blue'];
+  private realdata: any[] = [0, 0, 0, 0]; 
+  //private colordata: any[] = ['#666362', 'yellow', 'green', 'blue'];
   
   constructor(private cautionService: CautionService, private storageService: StorageService) { }
   
@@ -33,15 +33,15 @@ export class HomeComponent implements OnInit {
           const cautionState = this.chartInfo[i].etat;
           const index = this.labeldata.indexOf(cautionState);
           if (index !== -1) {
-            this.realdata[index]++; // Increment count for the corresponding state
+            this.realdata[index]++; 
           }
         }
-        this.createChart(this.labeldata, this.realdata, this.colordata);
+        this.createChart(this.labeldata, this.realdata/*, this.colordata*/);
       }
     });
   }
   
-  createChart(labeldata: any, realdata: any, colordata: any) { 
+  createChart(labeldata: any, realdata: any/*, colordata: any*/) { 
     this.chart = new Chart('MyChart', {
       type: 'pie',
       data: {
@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit {
           {
             label: 'Le nombre des cautions correspondant pour chaque etat',
             data: realdata,
-            backgroundColor: colordata,
+            //backgroundColor: colordata,
             hoverOffset: 4,
           },
         ],
