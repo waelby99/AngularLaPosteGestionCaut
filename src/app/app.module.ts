@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -26,6 +25,7 @@ import { EditbanComponent } from './banque/editban/editban.component';
 import { EditordComponent } from './ordonnateur/editord/editord.component';
 import { EditfordComponent } from './fournisseur/editford/editford.component';
 import { NgChartsModule } from 'ng2-charts';
+import { NgxPrintModule } from 'ngx-print';
 import { SigupComponent } from './demande/sigup/sigup.component';
 
 
@@ -59,7 +59,8 @@ import { SigupComponent } from './demande/sigup/sigup.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgChartsModule
+    NgChartsModule,
+    NgxPrintModule
   ],
   providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
