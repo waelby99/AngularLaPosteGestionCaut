@@ -6,6 +6,43 @@
                 <div class="card-body">
                     <h4 class="card-title" style="text-align: center;">Listes des cautions</h4>
                     <a (click)="addcaut()" class="btn btn-inverse-primary btn-fw">Ajouter Caution </a>
+                    <div class="search-options">
+                        <label>
+                          Mode de recherche :
+                          <select [(ngModel)]="searchMode">
+                            <option value="reference">Par Référence</option>
+                            <option value="etat">Par État</option>
+                            <option value="date">Par Date de Caution</option>
+                          </select>
+                        </label>
+                      </div>
+                      
+                      <div *ngIf="searchMode === 'reference'">
+                        <label>Recherche par Référence :</label>
+                        <input [(ngModel)]="referenceQuery" type="text" />
+                      </div>
+                      
+                      <div *ngIf="searchMode === 'etat'">
+                        <label>Recherche par État :</label>
+                        <select [(ngModel)]="etatQuery">
+                          <option value="En_cours">En cours</option>
+                          <option value="Main_Leve">Main Levée</option>
+                          <option value="Restitué">Restitué</option>
+                          <option value="Non_Restitué">Non Restitué</option>
+                        </select>
+                      </div>
+                      
+                      <div *ngIf="searchMode === 'date'">
+                        <label>Date de début :</label>
+                        <input [(ngModel)]="startDate" type="date" />
+                      
+                        <label>Date de fin :</label>
+                        <input [(ngModel)]="endDate" type="date" />
+                      </div>
+                      
+                      <button (click)="search()">Rechercher</button>
+                      
+
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
