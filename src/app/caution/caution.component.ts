@@ -40,28 +40,8 @@ export class CautionComponent implements OnInit {
     this.router.navigate(['cautions/modif/' + idCaution]);
   }
 
-  // Function to filter the ToShow array based on the search query
-/*filterCautions() {
-  if (!this.searchQuery) {
-    // If the search query is empty, load all cautions
-    this.loadCautions();
-    return;
-  }
 
-  // Filter cautions based on the search query
-  this.ToShow = this.ToShow.filter((caution) => {
-    // Check if caution and caution.reference are defined before using them
-    if (caution && caution.reference) {
-      return (caution.reference.toLowerCase().includes(this.searchQuery.toLowerCase())
-      );
-    } else {
-      // Handle the case where caution or caution.reference is undefined
-      return false;
-    }
-  });
-}*/
 search() {
-  // Réinitialisez la liste ToShow en fonction des critères de recherche
   if (this.searchMode === 'reference') {
     this.ToShow = this.ToShow.filter((caution:any) =>
       caution.reference.includes(this.referenceQuery)
@@ -71,11 +51,8 @@ search() {
       caution.etat === this.etatQuery
     );
   } else if (this.searchMode === 'date') {
-    // Effectuez la recherche par date de caution en utilisant this.startDate et this.endDate
     const startDate = new Date(this.startDate);
     const endDate = new Date(this.endDate);
-
-    // Effectuez la recherche par date de caution
     this.ToShow = this.ToShow.filter((caution:any) => {
       const cautionDate = new Date(caution.datecaut);
       return cautionDate >= startDate && cautionDate <= endDate;

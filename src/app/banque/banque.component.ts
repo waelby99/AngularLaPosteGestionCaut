@@ -13,14 +13,17 @@ export class BanqueComponent implements OnInit{
 
   ToShow:Banque[]=[];
   constructor(private banqueService:BanqueService,private router:Router){}
-
+  searchQuery: string = '';
+  
+  loadBanques() {
+    this.banqueService.getAll().subscribe(
+      (data) => {
+        this.ToShow = data;
+      }
+    );
+  }
   ngOnInit(): void {
-    
-      this.banqueService.getAll().subscribe(
-        data=>{
-          this.ToShow=data;
-        }
-      )
+    this.loadBanques();
   }
   /*detailbank(idCaution:any){
     this.router.navigate(['cautions/details/'+idCaution]);
@@ -31,4 +34,19 @@ export class BanqueComponent implements OnInit{
   edit(idBanque:any){
     this.router.navigate(['banques/modif/'+idBanque]);
   }
+  filterBanques() {
+  if (!this.searchQuery) {
+    this.loadBanques();
+    return;
+  }
+  this.ToShow = this.ToShow.filter((banque) => {
+    if (banque && banque.nom) {
+      return (banque.nom.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
+    } else {
+      return false;
+    }
+  });
+}
+
 }

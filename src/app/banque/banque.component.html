@@ -6,6 +6,8 @@
                 <div class="card-body">
                     <h4 class="card-title" style="text-align: center;">Listes des banques</h4>
                     <a (click)="addbank()" class="btn btn-inverse-primary btn-fw">Ajouter Banque </a>
+                    <input type="text" [(ngModel)]="searchQuery" placeholder="Search..." (input)="filterBanques()">
+
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
